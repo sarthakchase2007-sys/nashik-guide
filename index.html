@@ -1,100 +1,139 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="mr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Nashik - Local Guide</title>
-    <!-- Tailwind CSS CDN for modern styling -->
+    <title>Explore Nashik - Ultimate Local Guide</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade {
+            animation: fadeIn 1s ease-out forwards;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans leading-normal tracking-normal">
+<body class="bg-slate-50 font-sans text-slate-800">
 
     <!-- Header Section -->
-    <header class="bg-indigo-600 text-white shadow-md">
+    <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">🌍 Explore Nashik</h1>
-            <nav class="space-x-4">
-                <a href="#spots" class="hover:underline">Famous Spots</a>
-                <a href="#cafes" class="hover:underline">Top Cafes</a>
-                <a href="#food" class="hover:underline">Misal Spots</a>
+            <h1 class="text-2xl font-bold flex items-center gap-2"><i class="fa-solid fa-compass text-yellow-400"></i> Explore Nashik</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#spots" class="hover:text-yellow-300 transition">Famous Spots</a>
+                <a href="#cafes" class="hover:text-yellow-300 transition">Cafes</a>
+                <a href="#food" class="hover:text-yellow-300 transition">Misal</a>
+                <a href="#map" class="hover:text-yellow-300 transition">Live Map</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-cover bg-center text-white text-center py-24 px-4" style="background-color: #1e293b;">
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-4xl font-extrabold mb-4">Nashik Chya Sundar Jagacha Anubhav Gya</h2>
-            <p class="text-lg text-gray-300 mb-6">Sonsar bharat prasiddha aslele mandire, serene vineyards, ani best food spots ekaich thikani.</p>
-            <a href="#spots" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg">Mahiti Paha</a>
+    <!-- Hero Section with Animation -->
+    <section class="bg-slate-900 text-white text-center py-28 px-4 bg-blend-overlay relative">
+        <div class="max-w-3xl mx-auto animate-fade">
+            <span class="bg-indigo-600 text-xs uppercase tracking-widest py-1 px-3 rounded-full font-semibold">Welcome to Godavari City</span>
+            <h2 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6">Nashik Chya Sundar Jagacha Anubhav Gya</h2>
+            <p class="text-lg text-slate-300 mb-8">Pavitra mandire, serene vineyards, ani best food spots ekaich thikani.</p>
+            <a href="#spots" class="bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">Mahiti Paha <i class="fa-solid fa-arrow-down ml-2"></i></a>
         </div>
     </section>
 
     <!-- Main Content Container -->
-    <main class="container mx-auto px-6 py-12">
+    <main class="container mx-auto px-6 py-16">
 
         <!-- Famous Spots Section -->
-        <section id="spots" class="mb-16">
-            <h3 class="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-indigo-500 pb-2">📍 Famous Spots in Nashik</h3>
+        <section id="spots" class="mb-20">
+            <h3 class="text-3xl font-bold text-slate-900 mb-10 border-l-4 border-indigo-600 pl-4">📍 Famous Spots in Nashik</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=600&q=80" alt="Trimbakeshwar" class="h-48 w-full object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-bold mb-2 text-gray-800">Trimbakeshwar Temple</h4>
-                        <p class="text-gray-600">12 Jyotirlinga paiki ek mahatvapurna ani pavitra mandir.</p>
+                        <h4 class="text-xl font-bold mb-2 text-slate-800">Trimbakeshwar Temple</h4>
+                        <p class="text-slate-600 text-sm mb-4">12 Jyotirlinga paiki ek mahatvapurna ani pavitra mandir.</p>
+                        <span class="text-indigo-600 text-xs font-semibold bg-indigo-50 px-3 py-1 rounded-full">Spiritual</span>
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" alt="Sula Vineyards" class="h-48 w-full object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-bold mb-2 text-gray-800">Sula Vineyards</h4>
-                        <p class="text-gray-600">Indiachi wine capital ani sunset view sathi prasiddha thikan.</p>
+                        <h4 class="text-xl font-bold mb-2 text-slate-800">Sula Vineyards</h4>
+                        <p class="text-slate-600 text-sm mb-4">Indiachi wine capital ani sunset view sathi prasiddha thikan.</p>
+                        <span class="text-indigo-600 text-xs font-semibold bg-indigo-50 px-3 py-1 rounded-full">Leisure</span>
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1621645582312-a892b152d1b0?auto=format&fit=crop&w=600&q=80" alt="Panchavati" class="h-48 w-full object-cover">
                     <div class="p-6">
-                        <h4 class="text-xl font-bold mb-2 text-gray-800">Panchavati & Kalaram Mandir</h4>
-                        <p class="text-gray-600">Ramayan kalin itihas ani Godavari tatavaril pavitra kshetra.</p>
+                        <h4 class="text-xl font-bold mb-2 text-slate-800">Panchavati & Kalaram</h4>
+                        <p class="text-slate-600 text-sm mb-4">Ramayan kalin itihas ani Godavari tatavaril pavitra kshetra.</p>
+                        <span class="text-indigo-600 text-xs font-semibold bg-indigo-50 px-3 py-1 rounded-full">Historical</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Cafes Section -->
-        <section id="cafes" class="mb-16">
-            <h3 class="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-indigo-500 pb-2">☕ Trending Cafes</h3>
+        <section id="cafes" class="mb-20">
+            <h3 class="text-3xl font-bold text-slate-900 mb-10 border-l-4 border-indigo-600 pl-4">☕ Trending Cafes</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-bold mb-2 text-gray-800">The Little Next Door</h4>
-                    <p class="text-gray-600">College students ani youth sathi ek number hanging spot with great ambience.</p>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition flex gap-4 items-center">
+                    <div class="bg-indigo-100 text-indigo-600 p-4 rounded-lg text-2xl"><i class="fa-solid fa-mug-hot"></i></div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-800">The Little Next Door</h4>
+                        <p class="text-slate-600 text-sm mt-1">College students ani youth sathi ek number hanging spot with great ambience.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-bold mb-2 text-gray-800">Café Coffee Beans</h4>
-                    <p class="text-gray-600">Peaceful environment and delicious coffee flavors in Nashik.</p>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition flex gap-4 items-center">
+                    <div class="bg-indigo-100 text-indigo-600 p-4 rounded-lg text-2xl"><i class="fa-solid fa-coffee"></i></div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-800">Café Coffee Beans</h4>
+                        <p class="text-slate-600 text-sm mt-1">Peaceful environment and delicious coffee flavors in Nashik.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Famous Food (Misal) Section -->
-        <section id="food" class="mb-16">
-            <h3 class="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-indigo-500 pb-2">🔥 Famous Nashik Misal</h3>
+        <section id="food" class="mb-20">
+            <h3 class="text-3xl font-bold text-slate-900 mb-10 border-l-4 border-indigo-600 pl-4">🔥 Famous Nashik Misal</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-bold mb-2 text-gray-800">Hotel Sadhana (Misal)</h4>
-                    <p class="text-gray-600">Chulivarchi misal ani tractor ride experience sathi khup famous.</p>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition flex gap-4 items-center">
+                    <div class="bg-red-100 text-red-600 p-4 rounded-lg text-2xl"><i class="fa-solid fa-bowl-food"></i></div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-800">Hotel Sadhana (Misal)</h4>
+                        <p class="text-slate-600 text-sm mt-1">Chulivarchi misal ani tractor ride experience sathi khup famous.</p>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h4 class="text-xl font-bold mb-2 text-gray-800">Sardar Pavbhaji & Misal</h4>
-                    <p class="text-gray-600">Classic Nashik style spicy misal pav taste.</p>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition flex gap-4 items-center">
+                    <div class="bg-red-100 text-red-600 p-4 rounded-lg text-2xl"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-800">Sardar Pavbhaji & Misal</h4>
+                        <p class="text-slate-600 text-sm mt-1">Classic Nashik style spicy misal pav taste.</p>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Live Google Map Section -->
+        <section id="map" class="mb-12">
+            <h3 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-indigo-600 pl-4">🗺️ Nashik Live Map Location</h3>
+            <div class="rounded-xl overflow-hidden shadow-lg border-2 border-slate-200">
+                <iframe class="w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119981.39673891404!2d73.72718107954934!3d19.99745305149302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddd290b6811253%3A0x3f8a8dfff3b7af8a!2sNashik%2C%25Maharashtra!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center py-6">
+    <footer class="bg-slate-900 text-white text-center py-8">
         <p>&copy; 2026 Explore Nashik. All Rights Reserved.</p>
     </footer>
 
