@@ -6,6 +6,9 @@
     <title>Explore Nashik - Smart Tourism Guide</title>
     <meta name="description" content="Discover Nashik with live GPS navigation and verified details of Trimbakeshwar, Tapovan, Swaminarayan Mandir, Goda Park, CCM, Mumbai Naka, Seasons Cafe, and Misal spots.">
     
+    <!-- Google Search Console Verification Meta Tag -->
+    <meta name="google-site-verification" content="OQgaNaTlbEfIVHpKb_vcK7ZZ5N12lhndjvlj0WMVqLk" />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -83,7 +86,7 @@
                 <!-- Spot 1: Trimbakeshwar -->
                 <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Trimbakeshwar Temple Jyotirlinga">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1621360819776-3398939b4b9b?auto=format&fit=crop&w=800&q=80" alt="Trimbakeshwar Temple" class="h-52 w-full object-cover bg-slate-200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=800&q=80';">
+                        <img src="https://images.unsplash.com/photo-1621360819776-3398939b4b9b?auto=format&fit=crop&w=800&q=80" alt="Trimbakeshwar Temple" class="h-52 w-full object-cover bg-slate-200">
                         <div class="p-6">
                             <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Spiritual</span>
                             <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Trimbakeshwar Temple</h4>
@@ -103,7 +106,7 @@
                 <!-- Spot 2: Tapovan -->
                 <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Tapovan Ram Mandir Ghat Nashik">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Tapovan Nashik" class="h-52 w-full object-cover bg-slate-200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1621645582312-a892b152d1b0?auto=format&fit=crop&w=800&q=80';">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Tapovan Nashik" class="h-52 w-full object-cover bg-slate-200">
                         <div class="p-6">
                             <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Historical / Spiritual</span>
                             <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Tapovan Ram Mandir</h4>
@@ -123,7 +126,7 @@
                 <!-- Spot 3: Swaminarayan Mandir -->
                 <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Shree Swaminarayan Mandir Nashik">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=800&q=80" alt="Swaminarayan Mandir Nashik" class="h-52 w-full object-cover bg-slate-200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80';">
+                        <img src="https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=800&q=80" alt="Swaminarayan Mandir Nashik" class="h-52 w-full object-cover bg-slate-200">
                         <div class="p-6">
                             <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Architecture</span>
                             <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Shree Swaminarayan Mandir</h4>
@@ -143,7 +146,7 @@
                 <!-- Spot 4: Goda Park -->
                 <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Goda Park Panchavati Riverfront Nashik">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Goda Park Nashik" class="h-52 w-full object-cover bg-slate-200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80';">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Goda Park Nashik" class="h-52 w-full object-cover bg-slate-200">
                         <div class="p-6">
                             <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Nature / Park</span>
                             <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Goda Park (Panchavati)</h4>
@@ -375,10 +378,6 @@
                     card.style.display = "none";
                 }
             });
-        }
-
-        function openMapModal(name) {
-            openModal(name, "Direct GPS navigation and location details are available. Click 'Directions' below to open Google Maps directly.");
         }
 
         function openModal(title, desc) {
