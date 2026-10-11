@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Nashik - Ultimate Smart Tourism & Navigation Guide</title>
-    <!-- Advanced SEO & Search Engine Optimization Tags -->
-    <meta name="description" content="Official smart guide to Nashik tourism. Discover Trimbakeshwar, Someshwar, Navshya Ganpati, Saptashrungi Vani, Swami Samarth Math, and famous Misal spots with live maps.">
-    <meta name="keywords" content="Nashik tourism, Nashik local guide, Trimbakeshwar temple, Navshya Ganpati, Someshwar Mahadev, Saptashrungi Vani, best Misal in Nashik, Nashik live map">
-    <meta name="author" content="Sarthak Hase">
+    <title>Explore Nashik - Smart Tourism Guide</title>
+    <meta name="description" content="Discover Nashik with live GPS navigation and verified details of Trimbakeshwar, Tapovan, Swaminarayan Mandir, Goda Park, CCM, Mumbai Naka, Seasons Cafe, and Misal spots.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom Styles & Animations -->
     <style>
         @keyframes floatEffect {
             0% { transform: translateY(0px); }
@@ -36,7 +32,7 @@
             </h1>
             <nav class="hidden md:flex space-x-6 font-semibold">
                 <a href="#spots" class="hover:text-yellow-300 transition">Spots</a>
-                <a href="#cafes" class="hover:text-yellow-300 transition">Cafes</a>
+                <a href="#cafes" class="hover:text-yellow-300 transition">Cafes & Hubs</a>
                 <a href="#food" class="hover:text-yellow-300 transition">Misal</a>
                 <a href="#map" class="hover:text-yellow-300 transition">Live Map</a>
             </nav>
@@ -46,11 +42,10 @@
     <!-- Hero Section -->
     <section class="bg-gradient-to-br from-indigo-950 via-slate-900 to-indigo-900 text-white text-center py-28 px-4 relative overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10">
-            <span class="bg-indigo-600/60 text-yellow-300 text-xs uppercase tracking-widest py-1 px-4 rounded-full font-bold border border-indigo-500 inline-block mb-4">📍 Smart Local Tourism Guide</span>
+            <span class="bg-indigo-600/60 text-yellow-300 text-xs uppercase tracking-widest py-1 px-4 rounded-full font-bold border border-indigo-500 inline-block mb-4">📍 Smart Local Tourism & City Guide</span>
             <h2 class="text-4xl md:text-6xl font-extrabold mt-2 mb-6 leading-tight">Nashik Madhe Navin Ahat? Raste Mahit Nahit?</h2>
-            <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Tension nako gheu! Live GPS location, real-time map navigation, ani sarv itihasik va dharmik spotschi purna mahiti ekaich thikani.</p>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Live GPS location, real-time map navigation, CCM, Mumbai Naka, Tapovan, ani sarv spotschi purna mahiti ekaich thikani.</p>
             
-            <!-- GPS & Search Actions -->
             <div class="flex justify-center gap-4 flex-wrap mb-8">
                 <button onclick="getLiveLocation()" class="bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-bold py-3.5 px-7 rounded-full shadow-lg transition transform hover:scale-105 floating flex items-center gap-2">
                     <i class="fa-solid fa-location-crosshairs"></i> Majhi Current Location Paha
@@ -60,10 +55,9 @@
                 </a>
             </div>
 
-            <!-- Quick Search Bar -->
             <div class="max-w-md mx-auto">
                 <div class="relative">
-                    <input type="text" id="searchInput" onkeyup="searchSpots()" placeholder="Search spots (e.g. Someshwar, Ganpati, Saptashrungi)..." class="w-full py-3.5 pl-12 pr-4 rounded-full text-slate-900 bg-white/95 focus:outline-none focus:ring-4 focus:ring-yellow-400 shadow-xl placeholder-slate-500 font-medium">
+                    <input type="text" id="searchInput" onkeyup="searchSpots()" placeholder="Search spots (e.g. CCM, Tapovan, Seasons)..." class="w-full py-3.5 pl-12 pr-4 rounded-full text-slate-900 bg-white/95 focus:outline-none focus:ring-4 focus:ring-yellow-400 shadow-xl placeholder-slate-500 font-medium">
                     <i class="fa-solid fa-magnifying-glass absolute left-4 top-4.5 text-slate-400 text-lg"></i>
                 </div>
             </div>
@@ -73,16 +67,15 @@
     <!-- Main Container -->
     <main class="container mx-auto px-6 py-16">
 
-        <!-- GPS Location Status Box -->
         <div id="locationStatus" class="hidden mb-12 p-4 bg-indigo-50 border-2 border-indigo-300 rounded-xl text-center text-indigo-900 font-semibold shadow-md">
             <i class="fa-solid fa-compass text-indigo-600 animate-spin"></i> <span id="locationText">Searching your location...</span>
         </div>
 
-        <!-- All Tourist Spots Grid -->
+        <!-- Spots Grid -->
         <section id="spots" class="mb-24">
             <div class="text-center mb-12">
-                <h3 class="text-3xl font-extrabold text-slate-900 mb-2">🏛️ Famous Spots in Nashik & Around</h3>
-                <p class="text-slate-600">Click 'Read Full Info' for complete details or 'Get Directions' to navigate.</p>
+                <h3 class="text-3xl font-extrabold text-slate-900 mb-2">🏛️ Famous Spots, Landmarks & Hubs in Nashik</h3>
+                <p class="text-slate-600">Click 'Read Info' for details or 'Directions' for Google Maps navigation.</p>
             </div>
 
             <div id="spotsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -90,7 +83,7 @@
                 <!-- Spot 1: Trimbakeshwar -->
                 <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Trimbakeshwar Temple Jyotirlinga">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=600&q=80" alt="Trimbakeshwar" class="h-52 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1621360819776-3398939b4b9b?auto=format&fit=crop&w=800&q=80" alt="Trimbakeshwar Temple" class="h-52 w-full object-cover bg-slate-200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=800&q=80';">
                         <div class="p-6">
                             <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Spiritual</span>
                             <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Trimbakeshwar Temple</h4>
@@ -107,101 +100,161 @@
                     </div>
                 </div>
 
-                <!-- Spot 2: Someshwar Mahadev Mandir -->
-                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Someshwar Mahadev Mandir Godavari">
+                <!-- Spot 2: Tapovan -->
+                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Tapovan Ram Mandir Ghat Nashik">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Someshwar Mahadev Mandir" class="h-52 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Tapovan Nashik" class="h-52 w-full object-cover bg-slate-200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1621645582312-a892b152d1b0?auto=format&fit=crop&w=800&q=80';">
                         <div class="p-6">
-                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Spiritual & Nature</span>
-                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Someshwar Mahadev Mandir</h4>
-                            <p class="text-slate-600 text-sm mb-4">Godavari tatavaril atishay prachin ani pavitra shivmandir, javalach sundar dhabhab (waterfall) ahe.</p>
+                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Historical / Spiritual</span>
+                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Tapovan Ram Mandir</h4>
+                            <p class="text-slate-600 text-sm mb-4">Ramayan kalin itihas aslele thikan jithe Laxman ji ani Sita mata rahilay hote, Godavari tat.</p>
                         </div>
                     </div>
                     <div class="p-6 pt-0 flex gap-2">
-                        <button onclick="openModal('Someshwar Mahadev Mandir', 'Someshwar Temple is one of the oldest Shiva temples in Nashik, situated along the scenic banks of the Godavari River. The peaceful surroundings, lush green trees, and the nearby Dudhsagar waterfall make it a favorite spot for spiritual seekers and nature lovers alike.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
+                        <button onclick="openModal('Tapovan Ram Mandir', 'Tapovan is historically significant as Lord Rama, Sita, and Lakshmana spent a considerable part of their exile here. It features ancient trees, peaceful riverbanks, and temples along the Godavari river.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
                             <i class="fa-solid fa-circle-info mr-1"></i> Read Info
                         </button>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Someshwar+Mahadev+Mandir+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Tapovan+Ram+Mandir+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
                             <i class="fa-solid fa-diamond-turn-right mr-1"></i> Directions
                         </a>
                     </div>
                 </div>
 
-                <!-- Spot 3: Navshya Ganpati Mandir -->
-                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Navshya Ganpati Mandir Anandwalli">
+                <!-- Spot 3: Swaminarayan Mandir -->
+                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Shree Swaminarayan Mandir Nashik">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1621645582312-a892b152d1b0?auto=format&fit=crop&w=600&q=80" alt="Navshya Ganpati Mandir" class="h-52 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&w=800&q=80" alt="Swaminarayan Mandir Nashik" class="h-52 w-full object-cover bg-slate-200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80';">
                         <div class="p-6">
-                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Spiritual</span>
-                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Navshya Ganpati Mandir</h4>
-                            <p class="text-slate-600 text-sm mb-4">Anandwalli parisaratil khup jagrut ani bhaktanchi aashtha aslele ganpati mandir.</p>
+                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Architecture</span>
+                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Shree Swaminarayan Mandir</h4>
+                            <p class="text-slate-600 text-sm mb-4">Atishay bhavya, koriv kaam kelele ani shantata labnare prasiddha divya mandir.</p>
                         </div>
                     </div>
                     <div class="p-6 pt-0 flex gap-2">
-                        <button onclick="openModal('Navshya Ganpati Mandir', 'Navshya Ganpati Temple is located on the banks of the Godavari River in Anandwalli, Nashik. Built during the Peshwa era, it is believed that prayers made here with true devotion are fulfilled, hence the name Navshya Ganpati.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
+                        <button onclick="openModal('Shree Swaminarayan Mandir', 'Shree Swaminarayan Mandir in Nashik is a magnificent architectural marvel known for its intricate stone carvings, peaceful environment, and spiritual ambiance for devotees.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
                             <i class="fa-solid fa-circle-info mr-1"></i> Read Info
                         </button>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Navshya+Ganpati+Mandir+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Shree+Swaminarayan+Mandir+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
                             <i class="fa-solid fa-diamond-turn-right mr-1"></i> Directions
                         </a>
                     </div>
                 </div>
 
-                <!-- Spot 4: Saptashrungi Mata Vani -->
-                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Saptashrungi Mata Vani Temple">
+                <!-- Spot 4: Goda Park -->
+                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Goda Park Panchavati Riverfront Nashik">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="Saptashrungi Mata Vani" class="h-52 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Goda Park Nashik" class="h-52 w-full object-cover bg-slate-200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80';">
                         <div class="p-6">
-                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Shaktipeeth</span>
-                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Saptashrungi Mata (Vani)</h4>
-                            <p class="text-slate-600 text-sm mb-4">Maharashtrachi ardha shaktipeeth, 7 dongranmadhe vaslele divya mandir.</p>
+                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Nature / Park</span>
+                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Goda Park (Panchavati)</h4>
+                            <p class="text-slate-600 text-sm mb-4">Godavari nadichya kinaryavar banvlele navin sundar riverfront walking track ani garden.</p>
                         </div>
                     </div>
                     <div class="p-6 pt-0 flex gap-2">
-                        <button onclick="openModal('Saptashrungi Mata (Vani)', 'Saptashrungi is a sacred site situated 60 km from Nashik, housing a major Hindu temple of Goddess Saptashrungi Nivasini. It is regarded as one of the 3.5 Shakti Peethas in Maharashtra, perched atop a hill with seven mountain peaks.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
+                        <button onclick="openModal('Goda Park (Panchavati)', 'Goda Park is a newly developed scenic riverfront project along the Godavari River in Panchavati. It features walking paths, lush lawns, and a refreshing green environment perfect for morning walks and evening relaxation.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
                             <i class="fa-solid fa-circle-info mr-1"></i> Read Info
                         </button>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Saptashrungi+Mata+Mandir+Vani" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Goda+Park+Panchavati+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
                             <i class="fa-solid fa-diamond-turn-right mr-1"></i> Directions
                         </a>
                     </div>
                 </div>
 
-                <!-- Spot 5: Swami Samarth Math -->
-                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Swami Samarth Math Trimbak Nashik">
+                <!-- Spot 5: CCM -->
+                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="CCM City Centre Mall Nashik">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Swami Samarth Math" class="h-52 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1555529771-835f59fc5efe?auto=format&fit=crop&w=800&q=80" alt="City Centre Mall Nashik" class="h-52 w-full object-cover bg-slate-200">
                         <div class="p-6">
-                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Devotional</span>
-                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Swami Samarth Math</h4>
-                            <p class="text-slate-600 text-sm mb-4">Bhakt sathi ek peaceful ani divya anubhav denare Swami Samarthanche kendar.</p>
+                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Shopping & Entertainment</span>
+                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">CCM (City Centre Mall)</h4>
+                            <p class="text-slate-600 text-sm mb-4">Nashikcha mukhya commercial mall, shopping, INOX cinema ani food court sathi prasiddha.</p>
                         </div>
                     </div>
                     <div class="p-6 pt-0 flex gap-2">
-                        <button onclick="openModal('Swami Samarth Math', 'Swami Samarth Math in Nashik provides a serene and spiritual environment for devotees of Swami Samarth of Akkalkot. It is a peaceful place for meditation, prayers, and experiencing divine grace.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
+                        <button onclick="openModal('City Centre Mall (CCM)', 'City Centre Mall (CCM) located on the Mumbai-Agra highway is Nashik premier shopping and entertainment destination, featuring popular retail brands, multiplex cinema, and diverse food options.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
                             <i class="fa-solid fa-circle-info mr-1"></i> Read Info
                         </button>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Swami+Samarth+Math+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
+                        <a href="https://www.google.com/maps/search/?api=1&query=City+Centre+Mall+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
                             <i class="fa-solid fa-diamond-turn-right mr-1"></i> Directions
                         </a>
                     </div>
                 </div>
 
-                <!-- Spot 6: Sula Vineyards -->
-                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Sula Vineyards Wine Leisure">
+                <!-- Spot 6: Mumbai Naka -->
+                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Mumbai Naka Nashik Landmark">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" alt="Sula Vineyards" class="h-52 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80" alt="Mumbai Naka Nashik" class="h-52 w-full object-cover bg-slate-200">
                         <div class="p-6">
-                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Leisure</span>
-                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Sula Vineyards</h4>
-                            <p class="text-slate-600 text-sm mb-4">Indiachi wine capital ani beautiful sunset views sathi prasiddha thikan.</p>
+                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Landmark / Transit</span>
+                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Mumbai Naka Junction</h4>
+                            <p class="text-slate-600 text-sm mb-4">Nashikcha mukhya highway transit junction ani traveler hub, sarvadey connectivity.</p>
                         </div>
                     </div>
                     <div class="p-6 pt-0 flex gap-2">
-                        <button onclick="openModal('Sula Vineyards', 'Sula Vineyards is India’s leading wine producer and country’s first winery tour destination located in Nashik. Spread across scenic hills overlooking Gangapur dam, it offers wine tasting tours, restaurants, and breathtaking sunset views.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
+                        <button onclick="openModal('Mumbai Naka', 'Mumbai Naka is one of the most prominent junctions and transit hubs in Nashik on the Mumbai-Agra highway, bustling with commercial activity, transport services, and hotels.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
                             <i class="fa-solid fa-circle-info mr-1"></i> Read Info
                         </button>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Sula+Vineyards+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Mumbai+Naka+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
+                            <i class="fa-solid fa-diamond-turn-right mr-1"></i> Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Spot 7: Shalimar -->
+                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Shalimar Area Nashik Market">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80" alt="Shalimar Area Nashik" class="h-52 w-full object-cover bg-slate-200">
+                        <div class="p-6">
+                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Shopping & Food Hub</span>
+                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Shalimar Area</h4>
+                            <p class="text-slate-600 text-sm mb-4">Nashikcha traditional shopping, vibrant market ani street food sathi mukhya thikan.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex gap-2">
+                        <button onclick="openModal('Shalimar Area', 'Shalimar is the vibrant heart of old Nashik, known for bustling traditional bazaars, clothing stores, electronics, and authentic local street food stalls.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
+                            <i class="fa-solid fa-circle-info mr-1"></i> Read Info
+                        </button>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Shalimar+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
+                            <i class="fa-solid fa-diamond-turn-right mr-1"></i> Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Spot 8: Amrut Garden -->
+                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Amrut Garden Nashik Leisure">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Amrut Garden Nashik" class="h-52 w-full object-cover bg-slate-200">
+                        <div class="p-6">
+                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Leisure & Family</span>
+                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Amrut Garden</h4>
+                            <p class="text-slate-600 text-sm mb-4">Family outings, events ani serene green environment sathi prasiddha garden area.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex gap-2">
+                        <button onclick="openModal('Amrut Garden', 'Amrut Garden in Nashik is a spacious and well-maintained green venue ideal for family get-togethers, celebrations, and peaceful leisure time surrounded by plants and trees.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
+                            <i class="fa-solid fa-circle-info mr-1"></i> Read Info
+                        </button>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Amrut+Garden+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
+                            <i class="fa-solid fa-diamond-turn-right mr-1"></i> Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Spot 9: Seasons Café -->
+                <div class="spot-card bg-white rounded-2xl shadow-md overflow-hidden card-card-hover border border-slate-100 flex flex-col justify-between" data-name="Seasons Cafe Nashik Hangout">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Seasons Cafe Nashik" class="h-52 w-full object-cover bg-slate-200">
+                        <div class="p-6">
+                            <span class="text-indigo-600 text-xs font-bold bg-indigo-50 px-3 py-1 rounded-full">Cafe & Hangout</span>
+                            <h4 class="text-xl font-bold mt-3 mb-2 text-slate-900">Seasons Café</h4>
+                            <p class="text-slate-600 text-sm mb-4">Youth ani families madhe khup popular hang-out cafe, delicious food and coffee sathi.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex gap-2">
+                        <button onclick="openModal('Seasons Café', 'Seasons Café is one of the most loved hangout spots in Nashik among youngsters and families, offering a cozy ambiance, great coffee, and delicious meals.')" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 px-3 rounded-xl transition text-sm">
+                            <i class="fa-solid fa-circle-info mr-1"></i> Read Info
+                        </button>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Seasons+Cafe+Nashik" target="_blank" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-3 rounded-xl transition text-sm shadow">
                             <i class="fa-solid fa-diamond-turn-right mr-1"></i> Directions
                         </a>
                     </div>
@@ -288,7 +341,6 @@
         <p class="text-slate-400 text-sm">&copy; 2026 Explore Nashik. All Rights Reserved. Built with ❤️ for Travelers.</p>
     </footer>
 
-    <!-- JavaScript for GPS, Search & Modal Popup -->
     <script>
         function getLiveLocation() {
             const statusBox = document.getElementById('locationStatus');
@@ -300,15 +352,14 @@
                     (position) => {
                         const lat = position.coords.latitude;
                         const lng = position.coords.longitude;
-                        statusText.innerHTML = `✅ Location Found! Lat: ${lat.toFixed(4)}, Lng: ${lng.toFixed(4)}. You can check directions to any spot below!`;
+                        statusText.innerHTML = `✅ Location Found! Lat: ${lat.toFixed(4)}, Lng: ${lng.toFixed(4)}. You can check directions below!`;
                     },
                     (error) => {
-                        statusBox.classList.remove('hidden');
-                        statusText.innerHTML = `⚠️ Location access denied or unavailable. Please enable GPS permissions in browser.`;
+                        statusText.innerHTML = `⚠️ Location access denied or unavailable.`;
                     }
                 );
             } else {
-                statusText.innerHTML = `❌ Geolocation is not supported by your browser.`;
+                statusText.innerHTML = `❌ Geolocation is not supported.`;
             }
         }
 
@@ -324,6 +375,10 @@
                     card.style.display = "none";
                 }
             });
+        }
+
+        function openMapModal(name) {
+            openModal(name, "Direct GPS navigation and location details are available. Click 'Directions' below to open Google Maps directly.");
         }
 
         function openModal(title, desc) {
